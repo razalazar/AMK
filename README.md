@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Green AI](https://img.shields.io/badge/Green%20AI-CO2%20Optimized-brightgreen)
 
-> **A Tribute**: AMK stands for **Amy, Mariposa, and Kori**. This project was created by Andrés Salazar Quintero in eternal memory of Eliana Arenas Cano ("La Mariposa"), who passed away on March 31, 2025, and as a legacy for his children, Amy and Kori. It is a guardian of memory, built from love and engineered for the highest professional innovation.
+> **A Tribute**: AMK stands for **Amy, Mariposa, and Kori**. This project was created by Andrés Salazar Quintero in eternal memory of Eliana Arenas Cano ("Mariposa"), who passed away on March 31, 2025, and as a legacy for his children, Amy and Kori. It is a guardian of memory, built from love and engineered for the highest professional innovation.
 
 ## The IDE Context Regression Problem
 
