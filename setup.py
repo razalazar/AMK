@@ -7,8 +7,8 @@ setup(
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     author="Andrés Salazar Quintero",
-    author_email="andres@example.com", # Placeholder
-    url="https://github.com/yourusername/evomem", # Placeholder
+    author_email="asalazar@inecore.com",
+    url="https://github.com/razalazar/AMK",
     packages=find_packages(exclude=["tests*", "examples*", "docs*"]),
     install_requires=[
         # Core is independent, no strict requirements for basic usage
