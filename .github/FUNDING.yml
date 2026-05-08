@@ -1,5 +1,5 @@
 # .github/FUNDING.yml
 # This file configures the "Sponsor" button on your GitHub repository.
 
-# Custom donation platforms
-custom: ['https://www.buymeacoffee.com/razalazar']
+# Native Ko-fi integration (Supports PayPal in Colombia with 0% fees!)
+ko_fi: razalazar
