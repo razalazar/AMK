@@ -14,6 +14,11 @@ setup(
         # Core is independent, no strict requirements for basic usage
         # "pydantic>=2.0", # Optional but good for structured data if added later
     ],
+    keywords=[
+        "machine-learning", "green-ai", "llm", "slm", "agent-memory",
+        "rag", "ai-tools", "evolutionary-learning", "dataset", 
+        "sustainability", "developer-tools", "context-regression"
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.10",
