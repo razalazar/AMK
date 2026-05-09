@@ -5,8 +5,15 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Green AI](https://img.shields.io/badge/Green%20AI-CO2%20Optimized-brightgreen)
 
-> **A Tribute**: AMK stands for **Amy, Mariposa, and Kori**. This project was created by Andrés Salazar Quintero in eternal memory of Eliana Arenas Cano ("Mariposa"), who passed away on March 31, 2025, and as a legacy for his children, Amy and Kori. It is a guardian of memory, built from love and engineered for the highest professional innovation.
+## 🦋 An Invention with Soul: The AMK Legacy
 
+> *"From conserving water in the physical world to conserving energy in the digital plane of AI."*
+
+For years, my life was dedicated to designing eco-efficient inventions in the physical world. Today, I take the most important step of my career: bringing the laws of eco-efficiency into the core of software and Artificial Intelligence. 
+
+**AMK** stands for **A**my, **M**ariposa, and **K**ori. This open-source project is a profound technological legacy, built in eternal memory of my beloved wife, Eliana Arenas Cano ("La Mariposa"), who passed away on March 31, 2025, and dedicated to our children, Amy and Kori.
+
+It is a guardian of memory. It was born from heartbreak, engineered through love, and designed for the highest level of global professional innovation. AMK proves that technology can be deeply human, saving not just developer time, but actively protecting the planet our children will inherit.
 ## The IDE Context Regression Problem
 
 In software engineering, a common problem when using AI coding assistants is **IDE Context Regression**: when you fix Module A, the AI loses the context of Module B and breaks it. LLMs lack persistent memory between sessions—they start from scratch based only on what they see in the current window.

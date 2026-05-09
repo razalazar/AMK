@@ -5,8 +5,15 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Green AI](https://img.shields.io/badge/Green%20AI-CO2%20Optimized-brightgreen)
 
-> **Un Tributo**: AMK significa **Amy, Mariposa y Kori**. Este proyecto fue creado por Andrés Salazar Quintero en memoria eterna de Eliana Arenas Cano ("La Mariposa"), fallecida el 31 de marzo de 2025, y como un legado inquebrantable para sus hijos, Amy y Kori. Es un guardián de la memoria, construido desde el amor y diseñado con el máximo rigor para la innovación profesional global.
+## 🦋 Una Invención con Alma: El Legado AMK
 
+> *"De conservar agua en el mundo físico, a conservar energía en el plano digital de la IA."*
+
+Durante años, me dediqué al diseño de invenciones ecoeficientes en el mundo físico. Hoy, doy el paso más importante de mi carrera: llevar las leyes de la ecoeficiencia al núcleo del software y la Inteligencia Artificial.
+
+**AMK** significa **A**my, **M**ariposa y **K**ori. Este proyecto de código abierto es un profundo legado tecnológico, construido en memoria eterna de mi amada esposa, Eliana Arenas Cano ("La Mariposa"), quien partió el 31 de marzo de 2025, y dedicado a nuestros hijos, Amy y Kori.
+
+Es un guardián de la memoria. Nació del dolor, fue esculpido con amor y diseñado con el máximo rigor de la innovación profesional global. AMK demuestra que la tecnología puede ser profundamente humana, ahorrando no solo horas de desarrollo, sino protegiendo activamente el planeta que heredarán nuestros hijos.
 ## El Problema de la Regresión de Contexto en el IDE
 
 En la ingeniería de software, un problema común al usar asistentes de IA es la **regresión de contexto del IDE**: cuando corriges el módulo A, la IA pierde el contexto del módulo B y lo rompe. Los LLMs no tienen memoria persistente entre sesiones; empiezan desde cero con lo que ven en la ventana actual.
