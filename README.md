@@ -138,6 +138,9 @@ print("Alerts before changing forecast:", alerts)
 3. **Golden Dataset:** Rigorously verified pairs featuring the highest quality code evolutions.
 4. **SLM (Small Language Model):** Specialized, fine-tuned lightweight models trained on the Golden Dataset.
 
+## 🛡️ Security & Open Source Governance
+AMK operates under a strict **Zero-Telemetry, Local-First** architecture. Your proprietary code never leaves your local machine. For details on how to audit the package (including air-gapped testing and network monitoring), please read our [Security & Governance Policy](SECURITY.md).
+
 ## Contributing
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 

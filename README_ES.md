@@ -138,8 +138,11 @@ print("Alertas antes de modificar forecast:", alertas)
 3. **Golden Dataset:** Pares rigurosamente verificados.
 4. **SLM:** Modelos ligeros especializados.
 
-## Cómo Contribuir
-¡Agradecemos las contribuciones! Revisa [CONTRIBUTING.md](CONTRIBUTING.md).
+## 🛡️ Seguridad y Gobernanza Open Source
+AMK opera bajo una estricta arquitectura **Zero-Telemetry, Primero Local (Local-First)**. Tu código propietario jamás sale de tu máquina local. Para conocer todos los detalles sobre cómo auditar la librería (incluyendo pruebas sin internet y monitoreo de red), por favor lee nuestra [Política de Seguridad y Gobernanza](SECURITY.md).
+
+## Contribuciones
+¡Damos la bienvenida a las contribuciones! Por favor consulta [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Créditos
 - **Creador y Arquitecto**: Andrés Salazar Quintero
