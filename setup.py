@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="evomem",
-    version="0.1.3",
+    version="0.1.4",
     description="Evolutionary Memory System for capturing AI-human interactions and advancing Green AI.",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",

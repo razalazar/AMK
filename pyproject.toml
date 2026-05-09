@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "evomem"
-version = "0.1.3"
+version = "0.1.4"
 description = "Evolutionary Memory System for capturing AI-human interactions and advancing Green AI."
 readme = "README.md"
 requires-python = ">=3.10"
