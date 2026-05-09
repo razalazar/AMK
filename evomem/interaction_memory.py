@@ -15,7 +15,7 @@ class InteractionMemory:
     Manages the lifecycle of datasets from pilot to golden.
     """
 
-    def __init__(self, base_dir: str = "./memory_store"):
+    def __init__(self, base_dir: str = "./amk_datasets"):
         """
         Initialize the InteractionMemory with a 3-tier structure.
 
@@ -24,9 +24,9 @@ class InteractionMemory:
         """
         self.base_dir = base_dir
         self.dirs = {
-            "piloto": os.path.join(base_dir, "interactions", "piloto"),
-            "produccion": os.path.join(base_dir, "interactions", "produccion"),
-            "golden": os.path.join(base_dir, "interactions", "golden")
+            "piloto": os.path.join(base_dir, "01_piloto"),
+            "produccion": os.path.join(base_dir, "02_produccion"),
+            "golden": os.path.join(base_dir, "03_golden")
         }
         
         for path in self.dirs.values():

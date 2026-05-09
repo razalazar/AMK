@@ -14,10 +14,10 @@ class CodeEvolutionMemory:
     Class designed to track code corrections and maintain dependency graphs.
     """
 
-    def __init__(self, base_dir: str = "./memory_store"):
+    def __init__(self, base_dir: str = "./amk_datasets"):
         self.base_dir = base_dir
-        self.corrections_dir = os.path.join(base_dir, "code_evolution", "corrections")
-        self.deps_dir = os.path.join(base_dir, "code_evolution", "dependencies")
+        self.corrections_dir = os.path.join(base_dir, "04_code_evolution", "corrections")
+        self.deps_dir = os.path.join(base_dir, "04_code_evolution", "dependencies")
         
         os.makedirs(self.corrections_dir, exist_ok=True)
         os.makedirs(self.deps_dir, exist_ok=True)

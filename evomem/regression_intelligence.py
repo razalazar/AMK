@@ -12,10 +12,10 @@ class RegressionIntelligence:
     Analyzes code evolutions to prevent IDE context regression and assess system maturity.
     """
 
-    def __init__(self, base_dir: str = "./memory_store"):
+    def __init__(self, base_dir: str = "./amk_datasets"):
         self.base_dir = base_dir
-        self.corrections_path = os.path.join(base_dir, "code_evolution", "corrections", "corrections_log.jsonl")
-        self.analysis_dir = os.path.join(base_dir, "analysis")
+        self.corrections_path = os.path.join(base_dir, "04_code_evolution", "corrections", "corrections_log.jsonl")
+        self.analysis_dir = os.path.join(base_dir, "05_analysis")
         os.makedirs(self.analysis_dir, exist_ok=True)
 
     def _read_corrections(self) -> List[Dict[str, Any]]:

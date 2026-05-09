@@ -2,32 +2,46 @@
 Tests for the CodeEvolutionMemory class.
 """
 
+import os
+import shutil
 import unittest
+import json
 from evomem import CodeEvolutionMemory
 
 
 class TestCodeEvolutionMemory(unittest.TestCase):
     def setUp(self):
-        self.memory = CodeEvolutionMemory()
+        self.storage_dir = "./test_amk_datasets"
+        self.memory = CodeEvolutionMemory(base_dir=self.storage_dir)
 
-    def test_track_evolution(self):
-        self.memory.track_evolution(
-            original_code="pass",
-            improved_code="return True",
-            reason="Implemented return statement"
-        )
-        self.assertEqual(len(self.memory.get_all_evolutions()), 1)
+    def test_directory_creation(self):
+        self.assertTrue(os.path.exists(os.path.join(self.storage_dir, "04_code_evolution", "corrections")))
+        self.assertTrue(os.path.exists(os.path.join(self.storage_dir, "04_code_evolution", "dependencies")))
 
-    def test_extract_golden_pairs(self):
-        self.memory.track_evolution(
-            original_code="a = 1",
-            improved_code="a = 2",
-            reason="Fixed off-by-one"
+    def test_log_correction(self):
+        record_id = self.memory.log_correction(
+            module_name="src/api.py",
+            what_broke="Type mismatch on invoice validation",
+            root_cause="Missing strict parsing",
+            fix_applied="Added pydantic validation",
+            affected_modules=["src/billing.py"],
+            warning_for_ide="Ensure billing receives strictly typed data"
         )
-        pairs = self.memory.extract_golden_pairs()
-        self.assertEqual(len(pairs), 1)
-        self.assertIn("Fixed off-by-one", pairs[0]["prompt"])
-        self.assertEqual(pairs[0]["completion"], "a = 2")
+        self.assertIsNotNone(record_id)
+        
+        filepath = os.path.join(self.storage_dir, "04_code_evolution", "corrections", "corrections_log.jsonl")
+        self.assertTrue(os.path.exists(filepath))
+        
+        with open(filepath, "r") as f:
+            lines = f.readlines()
+            self.assertEqual(len(lines), 1)
+            record = json.loads(lines[0])
+            self.assertEqual(record["id"], record_id)
+            self.assertEqual(record["module"], "src/api.py")
+
+    def tearDown(self):
+        if os.path.exists(self.storage_dir):
+            shutil.rmtree(self.storage_dir)
 
 if __name__ == "__main__":
     unittest.main()
