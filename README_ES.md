@@ -43,34 +43,37 @@ graph TD
     classDef agnostic fill:#f9f9f9,stroke:#333,stroke-width:2px;
     classDef evomem fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
     classDef slm fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+    classDef green fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000;
+    classDef red fill:#ffccbc,stroke:#d84315,stroke-width:2px,color:#000;
 
     %% Phase 1: General LLM (The Teacher)
-    subgraph "Fase A: El Presente (Cualquier LLM & IDE)"
-        IDE[Cualquier IDE / Agente]:::agnostic
-        LLM[LLM Gigante <br/> Alto Costo de API & CO2]:::agnostic
-        IDE <-->|Consultas| LLM
+    subgraph "Fase A: El Presente (Cualquier LLM General e IDE)"
+        IDE[Cualquier IDE / Agente de Código]:::agnostic
+        LLM[LLM Gigante <br/> Alto Costo API y Alta Emisión CO2]:::red
+        IDE <-->|1. Quema Tokens y Agua| LLM
     end
 
     %% Phase 2: EVOMEM (The Black Box)
-    subgraph "Fase B: El Embudo (EVOMEM)"
-        EVO[Motor EVOMEM]:::evomem
+    subgraph "Fase B: Embudo AMK Sandbox (EVOMEM)"
+        EVO[Motor EVOMEM <br/> Memoria Evolutiva]:::evomem
         P1(01_piloto: Logs Crudos)
         P2(02_produccion: Limpios)
-        P3(03_golden: Pares Perfectos)
+        P3(03_golden: Pares Verificados)
         
-        IDE -->|Captura Contexto y Correcciones| EVO
+        IDE -->|2. Captura Correcciones| EVO
+        EVO -.->|3. Inyecta Contexto <br/> AHORRA TOKENS HOY| IDE
         EVO --> P1 --> P2 --> P3
     end
 
     %% Phase 3 & 4: SLM & Cloud (The Future)
-    subgraph "Fase C & D: El Futuro (Nube Soberana SLM)"
+    subgraph "Fase C & D: Futuro Green AI (SLM Soberano)"
         FT[Proceso de Fine-Tuning]:::slm
-        SLM[SLM Experto <br/> Sostenible y Ecológico]:::slm
-        Vault[(Bóveda Privada de la Empresa)]
+        SLM[SLM Experto de Dominio <br/> CERO Costo API y Ultra-Bajo CO2]:::green
+        Vault[(Bóveda Privada Corporativa)]
         
-        P3 -->|Entrena| FT
+        P3 -->|4. Entrena| FT
         FT --> SLM
-        SLM <-->|Consulta RAG| Vault
+        SLM <-->|5. Consultas Privadas y Rápidas| Vault
     end
 ```
 

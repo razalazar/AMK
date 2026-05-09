@@ -43,34 +43,37 @@ graph TD
     classDef agnostic fill:#f9f9f9,stroke:#333,stroke-width:2px;
     classDef evomem fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
     classDef slm fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+    classDef green fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000;
+    classDef red fill:#ffccbc,stroke:#d84315,stroke-width:2px,color:#000;
 
     %% Phase 1: General LLM (The Teacher)
     subgraph "Phase A: The Present (Any General LLM & IDE)"
         IDE[Any IDE / Coding Agent]:::agnostic
-        LLM[Giant LLM <br/> High API Cost & CO2]:::agnostic
-        IDE <-->|Queries| LLM
+        LLM[Giant LLM <br/> High API Cost & High CO2 Emissions]:::red
+        IDE <-->|1. Burns Tokens & Water| LLM
     end
 
     %% Phase 2: EVOMEM (The Black Box)
-    subgraph "Phase B: The Sandbox Funnel (EVOMEM)"
-        EVO[EVOMEM Engine]:::evomem
+    subgraph "Phase B: AMK Sandbox Funnel (EVOMEM)"
+        EVO[EVOMEM Engine <br/> Evolutionary Memory]:::evomem
         P1(01_pilot: Raw Logs)
         P2(02_production: Cleaned)
         P3(03_golden: Verified Pairs)
         
-        IDE -->|Captures Context & Corrections| EVO
+        IDE -->|2. Captures Corrections| EVO
+        EVO -.->|3. Injects Context <br/> SAVES TOKENS TODAY| IDE
         EVO --> P1 --> P2 --> P3
     end
 
     %% Phase 3 & 4: SLM & Cloud (The Future)
-    subgraph "Phase C & D: The Future (Sovereign SLM Cloud)"
+    subgraph "Phase C & D: Green AI Future (Sovereign SLM)"
         FT[Fine-Tuning Process]:::slm
-        SLM[Domain Expert SLM <br/> Eco-Friendly]:::slm
+        SLM[Domain Expert SLM <br/> ZERO API Cost & Ultra-Low CO2]:::green
         Vault[(Private Corporate Vault)]
         
-        P3 -->|Trains| FT
+        P3 -->|4. Trains| FT
         FT --> SLM
-        SLM <-->|RAG Query| Vault
+        SLM <-->|5. Private Fast Queries| Vault
     end
 ```
 
