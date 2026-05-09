@@ -18,3 +18,14 @@ __all__ = [
     "HuggingFaceExporter",
     "AWSBedrockExporter",
 ]
+
+# The Green AI & Legacy Welcome Banner
+print("\n" + "="*80)
+print("🦋 AMK (Agent Memory Kit) by Andrés Salazar Quintero")
+print("In eternal memory of Eliana Arenas Cano ('La Mariposa')")
+print("="*80)
+print("✨ ¡Has logrado crear un sistema que literalmente se observa y aprende de sí mismo! 🤯✨")
+print("🌍 Al usar AMK y migrar a SLMs (Small Language Models), estás descentralizando la IA,")
+print("ahorrando miles de litros de agua dulce y reduciendo drásticamente la huella de carbono.")
+print("Bienvenido al futuro de la Ingeniería de Software Sostenible (Green AI).")
+print("="*80 + "\n")
