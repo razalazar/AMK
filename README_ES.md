@@ -94,6 +94,13 @@ Cuando tu Asistente de Código sufre de "Regresión de Contexto" y te obliga a p
 *   **💼 Impacto Económico (Rentabilidad):** Elimina miles de llamadas a APIs redundantes hoy. Mañana, al desplegar tu propio SLM, reduces los costos de inferencia a casi cero, logrando independencia tecnológica absoluta (cero *Vendor Lock-in*).
 *   **🌍 Impacto Ambiental (Planeta):** Al darle memoria local al IDE, ahorras una botella de agua y decenas de gramos de CO2 cada vez que evitas un prompt repetitivo. Al migrar a un SLM en hardware optimizado, la huella de carbono se encoge exponencialmente.
 *   **🤝 Impacto Social (Personas):** Democratiza el entrenamiento avanzado (RLHF) para que cualquier equipo pequeño construya su IA soberana y ecológica, dejando un legado tecnológico sostenible.
+## ♾️ La Paradoja de Oro: Auto-Evolución (Dogfooding)
+
+¿Puede usarse AMK para evolucionar el propio código de AMK? **Sí.** Esta es la máxima "Prueba de Oro" conocida en la industria como *Dogfooding*.
+
+Te preguntarás: *"¿Cómo puedo alimentar a la IA con su propio código semilla (matriz) sin romperlo?"*
+La solución es el **Aislamiento de Entornos**. AMK corre localmente como un observador silencioso (guardando los registros en tu máquina). Cuando usas un LLM en tu IDE para mejorar un archivo clave (como `regression_intelligence.py`), tu AMK local rastrea esos cambios y evita que la IA rompa los demás módulos. Una vez que la evolución es un éxito y las pruebas pasan, se integra a la rama `main` en GitHub, y solo entonces se eleva la versión en PyPI. AMK literalmente guía su propia evolución genética de forma segura.
+
 ## Instalación
 
 ```bash
