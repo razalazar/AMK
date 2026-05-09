@@ -4,6 +4,9 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Green AI](https://img.shields.io/badge/Green%20AI-CO2%20Optimized-brightgreen)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-AI-purple)
+![LLM & SLM](https://img.shields.io/badge/LLM%20&%20SLM-Agnostic-orange)
+![Agent Memory](https://img.shields.io/badge/Agent-Memory-red)
 
 ## 🦋 Una Invención con Alma: El Legado AMK
 
