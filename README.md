@@ -23,10 +23,64 @@ The system is built on three interconnected layers:
 2. **Layer 2 — Code Evolution Memory:** Captures every code change and its context: what module changed, why, what was wrong, how it was fixed, and *which other modules might be affected*.
 3. **Layer 3 — Regression Intelligence:** A deterministic dependency analysis. Every time code changes, it cross-references Layer 2 to see if previous corrections are impacted, generating a preemptive alert before the IDE breaks them.
 
-## Why Green AI?
+## The Agnostic AI Factory Architecture
+
+To truly democratize AI, EVOMEM acts as the universal bridge between costly, generic LLMs and private, highly-efficient SLMs.
+
+```mermaid
+graph TD
+    %% Styling
+    classDef agnostic fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef evomem fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef slm fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+
+    %% Phase 1: General LLM (The Teacher)
+    subgraph "Phase A: The Present (Any General LLM & IDE)"
+        IDE[Any IDE / Coding Agent]:::agnostic
+        LLM[Giant LLM <br/> High API Cost & CO2]:::agnostic
+        IDE <-->|Queries| LLM
+    end
+
+    %% Phase 2: EVOMEM (The Black Box)
+    subgraph "Phase B: The Sandbox Funnel (EVOMEM)"
+        EVO[EVOMEM Engine]:::evomem
+        P1(01_pilot: Raw Logs)
+        P2(02_production: Cleaned)
+        P3(03_golden: Verified Pairs)
+        
+        IDE -->|Captures Context & Corrections| EVO
+        EVO --> P1 --> P2 --> P3
+    end
+
+    %% Phase 3 & 4: SLM & Cloud (The Future)
+    subgraph "Phase C & D: The Future (Sovereign SLM Cloud)"
+        FT[Fine-Tuning Process]:::slm
+        SLM[Domain Expert SLM <br/> Eco-Friendly]:::slm
+        Vault[(Private Corporate Vault)]
+        
+        P3 -->|Trains| FT
+        FT --> SLM
+        SLM <-->|RAG Query| Vault
+    end
+```
+
+### 🔮 Why SLMs are the Definitive Future
+The industry is experiencing a paradigm shift. While giant LLMs are excellent for general reasoning and prototyping (Phase A), they are unsustainable for massive production. **Small Language Models (SLMs)** represent the future of enterprise software development because:
+1.  **Absolute Specialization:** An SLM trained exclusively on your Golden Dataset becomes a domain expert. It doesn't need to know Shakespeare to validate an invoice.
+2.  **Privacy and Sovereignty:** They can run entirely on your private infrastructure (or locally on edge devices), ensuring that your proprietary data never touches a public API.
+3.  **Ultra-Low Latency:** Smaller parameter sizes mean lightning-fast response times, essential for real-time applications.
+
+## 🌱 Why Green AI? (Economic, Environmental, and Social Impact)
 
 Training massive LLMs consumes staggering amounts of energy. AMK champions the **Green AI** vision by creating high-quality, domain-specific "Golden Datasets" used to train **SLMs (Small Language Models)**. These SLMs are highly specialized, run efficiently on edge devices, and drastically reduce the environmental cost of AI.
 
+Research shows that **a single massive AI query emits ~4.3 grams of CO₂** (20x more than a normal web search) and **every 10-50 queries consume a 500ml bottle of fresh water** for data center cooling. 
+
+When your AI Coding Assistant suffers from "Context Regression" and forces you to ask 15 redundant questions to fix the same bug, we are literally pouring water and emissions down the drain. EVOMEM intercepts this waste through the Sustainable Trinity:
+
+*   **💼 Economic Impact (Profit):** Eliminates thousands of redundant API calls today. Tomorrow, deploying your own SLM drops inference costs to near-zero and completely eliminates vendor lock-in.
+*   **🌍 Environmental Impact (Planet):** By giving the IDE local memory, you save a bottle of fresh water and grams of CO2 every time you avoid a redundant prompt. An SLM running on optimized hardware radically shrinks this carbon footprint.
+*   **🤝 Social Impact (People):** Democratizes advanced training (RLHF) so any small team can build their sovereign, eco-friendly AI, leaving a sustainable technological legacy.
 ## Installation
 
 ```bash

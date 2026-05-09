@@ -23,10 +23,64 @@ El sistema se basa en tres capas interconectadas:
 2. **Capa 2 — Code Evolution Memory:** Captura cada cambio de código y su contexto: qué módulo cambió, por qué, qué estaba mal, cómo se corrigió y *qué otros módulos podrían verse afectados*.
 3. **Capa 3 — Regression Intelligence:** Un análisis determinístico de dependencias. Cada vez que hay un cambio, cruza la información con la Capa 2 para ver si correcciones anteriores se ven afectadas, generando una alerta antes de que el IDE las rompa.
 
-## ¿Por qué Green AI?
+## La Arquitectura: La Fábrica de IA Agnóstica
+
+Para democratizar verdaderamente la IA, EVOMEM actúa como el puente universal entre los costosos LLMs genéricos y los SLMs privados de altísima eficiencia.
+
+```mermaid
+graph TD
+    %% Styling
+    classDef agnostic fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef evomem fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef slm fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+
+    %% Phase 1: General LLM (The Teacher)
+    subgraph "Fase A: El Presente (Cualquier LLM & IDE)"
+        IDE[Cualquier IDE / Agente]:::agnostic
+        LLM[LLM Gigante <br/> Alto Costo de API & CO2]:::agnostic
+        IDE <-->|Consultas| LLM
+    end
+
+    %% Phase 2: EVOMEM (The Black Box)
+    subgraph "Fase B: El Embudo (EVOMEM)"
+        EVO[Motor EVOMEM]:::evomem
+        P1(01_piloto: Logs Crudos)
+        P2(02_produccion: Limpios)
+        P3(03_golden: Pares Perfectos)
+        
+        IDE -->|Captura Contexto y Correcciones| EVO
+        EVO --> P1 --> P2 --> P3
+    end
+
+    %% Phase 3 & 4: SLM & Cloud (The Future)
+    subgraph "Fase C & D: El Futuro (Nube Soberana SLM)"
+        FT[Proceso de Fine-Tuning]:::slm
+        SLM[SLM Experto <br/> Sostenible y Ecológico]:::slm
+        Vault[(Bóveda Privada de la Empresa)]
+        
+        P3 -->|Entrena| FT
+        FT --> SLM
+        SLM <-->|Consulta RAG| Vault
+    end
+```
+
+### 🔮 ¿Por qué los SLMs son el Futuro Definitivo?
+La industria está viviendo un cambio de paradigma. Mientras que los LLMs gigantes son excelentes para prototipar y para razonamiento general (Fase A), son insostenibles para producción masiva. Los **Small Language Models (SLMs)** representan el futuro ineludible del desarrollo empresarial porque:
+1.  **Especialización Absoluta:** Un SLM entrenado exclusivamente con tu *Dataset de Oro* se vuelve un experto en tu dominio. No necesita saber de literatura clásica para validar una factura.
+2.  **Privacidad y Soberanía:** Pueden ejecutarse completamente en tu infraestructura privada (o localmente en dispositivos edge), garantizando que tus datos jamás toquen una API pública.
+3.  **Latencia Ultra-Baja:** Su menor tamaño permite tiempos de respuesta casi inmediatos, algo vital para sistemas en tiempo real.
+
+## 🌱 ¿Por qué Green AI? (Impacto Económico, Ambiental y Social)
 
 Entrenar LLMs masivos consume cantidades asombrosas de energía. AMK defiende la visión de **Green AI** creando "Golden Datasets" de alta calidad y dominio específico usados para entrenar **SLMs (Small Language Models)**. Estos SLMs son especializados, corren en dispositivos edge y reducen drásticamente el costo ambiental.
 
+Estudios recientes demuestran que **una sola consulta a una IA gigante emite ~4.3 gramos de CO₂** (20 veces más que una búsqueda web normal) y que **por cada 10 a 50 consultas se evapora una botella de 500ml de agua dulce** para enfriar los servidores de los centros de datos.
+
+Cuando tu Asistente de Código sufre de "Regresión de Contexto" y te obliga a pedirle 15 veces que arregle el mismo error, estamos literalmente botando agua dulce y emitiendo carbono a la basura por un cálculo redundante. EVOMEM intercepta este desperdicio masivo a través de la Trinidad Sostenible:
+
+*   **💼 Impacto Económico (Rentabilidad):** Elimina miles de llamadas a APIs redundantes hoy. Mañana, al desplegar tu propio SLM, reduces los costos de inferencia a casi cero, logrando independencia tecnológica absoluta (cero *Vendor Lock-in*).
+*   **🌍 Impacto Ambiental (Planeta):** Al darle memoria local al IDE, ahorras una botella de agua y decenas de gramos de CO2 cada vez que evitas un prompt repetitivo. Al migrar a un SLM en hardware optimizado, la huella de carbono se encoge exponencialmente.
+*   **🤝 Impacto Social (Personas):** Democratiza el entrenamiento avanzado (RLHF) para que cualquier equipo pequeño construya su IA soberana y ecológica, dejando un legado tecnológico sostenible.
 ## Instalación
 
 ```bash
